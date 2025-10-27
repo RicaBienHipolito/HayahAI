@@ -6,7 +6,66 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: signin.php");
     exit();
 }
+
+// ===== DATABASE CONNECTION =====
+$servername = "localhost:3307 ";
+$username = "root";     // change if you created a new MySQL user
+$password = "";          // put your MySQL password if any
+$dbname = "hayahai_db";    // make sure this matches your actual database name
+
+// Try connecting to MySQL
+$conn = @new mysqli($servername, $username, $password, $dbname);
+
+// If connection fails, redirect to signin.php instead of crashing
+if ($conn->connect_errno) {
+    header("Location: signin.php");
+    exit();
+}
+
+// ===== CHATBOT LOGIC =====
+$answer = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $question = strtolower(trim($_POST["question"]));
+
+    if (strpos($question, "hello") !== false || strpos($question, "hi") !== false) {
+        $answer = "Hello! You can ask me about product locations or stock availability.";
+    }
+    elseif (strpos($question, "where") !== false) {
+        $words = explode(" ", $question);
+        $item = trim(end($words));
+
+        $sql = "SELECT Category FROM products WHERE Name LIKE '%$item%'";
+        $result = $conn->query($sql);
+
+        if ($result && $result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $answer = ucfirst($item) . " is located in the " . $row["Category"] . " section.";
+        } else {
+            $answer = "Sorry, I couldn't find where " . htmlspecialchars($item) . " is located.";
+        }
+    }
+    // Check stock of an item
+    elseif (strpos($question, "stock") !== false || strpos($question, "available") !== false || strpos($question, "how many") !== false) {
+        // Clean up question and extract possible product name
+        $item = trim(str_replace(["how many", "are", "in stock", "stock", "available", "of", "?", "."], "", $question));
+
+        $sql = "SELECT Name, StockQuantity FROM products WHERE Name LIKE '%$item%'";
+        $result = $conn->query($sql);
+
+        if ($result && $result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $answer = "There are " . $row["StockQuantity"] . " " . ucfirst($row["Name"]) . "(s) in stock.";
+        } else {
+            $answer = "Sorry, I couldn't find stock information for " . htmlspecialchars($item) . ".";
+        }
+    }
+    else {
+        $answer = "I'm not sure how to answer that. Try asking 'Where is pineapple?' or 'How many mango in stock?'";
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +84,6 @@ if (!isset($_SESSION['user_id'])) {
     align-items: center;
   }
 
-  /* ===== TOP BAR ===== */
   .top-bar {
     position: absolute;
     top: 20px;
@@ -50,7 +108,6 @@ if (!isset($_SESSION['user_id'])) {
     transform: scale(1.1);
   }
 
-  /* ===== SIDEBAR MENU ===== */
   .sidebar {
     height: 100%;
     width: 250px;
@@ -85,13 +142,14 @@ if (!isset($_SESSION['user_id'])) {
     cursor: pointer;
   }
 
-  /* ===== SEARCH BAR ===== */
   .search-container {
     width: 80%;
     max-width: 1000px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 15px;
   }
 
   .search-box {
@@ -117,14 +175,23 @@ if (!isset($_SESSION['user_id'])) {
     background-color: #ffc55c;
     border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     font-weight: bold;
     color: white;
   }
 
-  /* ===== FOOTER ===== */
+  .response {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+  }
+
   footer {
     position: fixed;
     bottom: 0;
@@ -141,13 +208,12 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body>
 
-  <!-- ===== TOP BAR ===== -->
+  <!-- TOP BAR -->
   <div class="top-bar">
     <span class="menu-icon" onclick="openMenu()">☰</span>
-    <a href="cart.php" class="cart-icon">🛒</a>
   </div>
 
-  <!-- ===== SIDEBAR MENU ===== -->
+  <!-- SIDEBAR MENU -->
   <div id="sidebar" class="sidebar">
     <span class="close-btn" onclick="closeMenu()">×</span>
     <a href="compare.php">Compare Products</a>
@@ -155,15 +221,22 @@ if (!isset($_SESSION['user_id'])) {
     <a href="signout.php">Sign Out</a>
   </div>
 
-  <!-- ===== SEARCH BAR ===== -->
+  <!-- SEARCH BAR / CHATBOT -->
   <div class="search-container">
-    <div class="search-box">
-      <input type="text" placeholder="Search for a product">
-      <button>▶</button>
-    </div>
+    <form method="post" class="search-box">
+      <input type="text" name="question" placeholder="Ask me something, e.g. 'Where is mango?'" required>
+      <button type="submit">▶</button>
+    </form>
+
+    <?php if ($answer): ?>
+      <div class="response">
+        <strong>Answer:</strong><br>
+        <?= htmlspecialchars($answer) ?>
+      </div>
+    <?php endif; ?>
   </div>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>HayahAI</footer>
 
   <script>

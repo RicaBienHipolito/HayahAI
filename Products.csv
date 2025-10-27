@@ -1,0 +1,151 @@
+ProductID,Name,Category,Supplier,Price,StockQuantity
+001-0001,Plum,Fruits & Vegetables,Voomm,$4.00 ,95
+001-0002,Strawberries,Fruits & Vegetables,Babblestorm,$6.00 ,54
+001-0003,Spinach,Fruits & Vegetables,Devshare,$2.50 ,72
+001-0004,Green Beans,Fruits & Vegetables,Gigazoom,$2.00 ,81
+001-0005,Cabbage,Fruits & Vegetables,Chatterbridge,$1.00 ,88
+001-0006,Mushrooms,Fruits & Vegetables,Photospace,$6.00 ,72
+001-0007,Pear,Fruits & Vegetables,Centizu,$4.50 ,77
+001-0008,Cucumber,Fruits & Vegetables,Brainverse,$1.75 ,19
+001-0009,Pineapple,Fruits & Vegetables,Photojam,$3.50 ,18
+001-0010,Onion,Fruits & Vegetables,Skyble,$2.00 ,39
+001-0011,Zucchini,Fruits & Vegetables,Kare,$2.50 ,61
+001-0012,Mango,Fruits & Vegetables,Twitternation,$5.00 ,24
+001-0013,Lemon,Fruits & Vegetables,Layo,$2.30 ,12
+001-0014,Kiwi,Fruits & Vegetables,Fiveclub,$6.00 ,45
+001-0015,Orange,Fruits & Vegetables,Devshare,$3.00 ,85
+001-0016,Carrot,Fruits & Vegetables,Avaveo,$1.50 ,51
+001-0017,Broccoli,Fruits & Vegetables,Realblab,$4.00 ,73
+001-0018,Eggplant,Fruits & Vegetables,Eire,$3.00 ,39
+001-0019,Bell Pepper,Fruits & Vegetables,Tagtune,$4.45 ,96
+001-0020,Potato,Fruits & Vegetables,Tagtune,$1.20 ,28
+001-0021,Peas,Fruits & Vegetables,Edgepulse,$3.00 ,99
+001-0022,Blueberries,Fruits & Vegetables,Jaloo,$10.00 ,66
+001-0023,Garlic,Fruits & Vegetables,Katz,$7.00 ,27
+001-0024,Lettuce,Fruits & Vegetables,Fadeo,$2.00 ,58
+001-0025,Coconut,Fruits & Vegetables,Mydo,$5.00 ,89
+001-0026,Banana,Fruits & Vegetables,Vinder,$98.43 ,56
+001-0027,Pomegranate,Fruits & Vegetables,Dynabox,$6.00 ,60
+001-0028,Peach,Fruits & Vegetables,Quire,$4.00 ,47
+001-0029,Asparagus,Fruits & Vegetables,Devpoint,$5.00 ,22
+001-0030,Watermelon,Fruits & Vegetables,Latz,$3.00 ,75
+001-0031,Lime,Fruits & Vegetables,Vinder,$2.00 ,21
+001-0032,Greek Yogurt,Fruits & Vegetables,Meeveo,$51.17 ,62
+001-0033,Kale,Fruits & Vegetables,Yodoo,$4.00 ,77
+001-0034,Grapes,Fruits & Vegetables,Skinix,$5.50 ,88
+001-0035,Apricot,Fruits & Vegetables,Quinu,$5.00 ,38
+001-0036,Papaya,Fruits & Vegetables,Demivee,$4.50 ,59
+001-0037,Apple,Fruits & Vegetables,Zava,$3.50 ,81
+001-0038,Cauliflower,Fruits & Vegetables,Abata,$2.50 ,52
+001-0039,Tomato,Fruits & Vegetables,Quatz,$2.50 ,84
+001-0040,Sweet Potato,Fruits & Vegetables,Photospace,$2.00 ,100
+001-0041,Cherry,Fruits & Vegetables,Rooxo,$8.00 ,30
+002-0001,Rye Bread,Bakery,Vitz,$3.00 ,26
+002-0001,Oatmeal Biscuit,Bakery,Gigazoom,$5.00 ,16
+002-0002,Multigrain Bread,Bakery,Roombo,$3.50 ,65
+002-0003,Sourdough Bread,Bakery,Flashspan,$4.00 ,41
+002-0004,White Bread,Bakery,Skyble,$2.50 ,92
+002-0005,Butter Biscuit,Bakery,Ozu,$6.00 ,38
+002-0006,Chocolate Biscuit,Bakery,Vidoo,$5.00 ,75
+002-0007,Rye Bread,Bakery,Brainlounge,$3.00 ,69
+002-0008,Digestive Biscuit,Bakery,BlogXS,$4.00 ,97
+002-0009,Vanilla Biscuit,Bakery,Yozio,$5.50 ,80
+002-0010,Whole Wheat Bread,Bakery,Lazz,$3.50 ,17
+003-0001,Egg (Goose),Dairy,Muxo,$2.50 ,44
+003-0002,Greek Yogurt,Dairy,Thoughtstorm,$3.00 ,91
+003-0003,Egg (Duck),Dairy,Wordify,$1.00 ,43
+003-0004,Feta Cheese,Dairy,Youfeed,$7.00 ,94
+003-0005,Swiss Cheese,Dairy,Reallinks,$8.00 ,49
+003-0006,Parmesan Cheese,Dairy,Feedspan,$12.00 ,63
+003-0007,Egg (Quail),Dairy,Realpoint,$0.80 ,97
+003-0008,Butter,Dairy,Kayveo,$3.00 ,51
+003-0009,Ricotta Cheese,Dairy,Shufflebeat,$6.00 ,51
+003-0010,Mozzarella Cheese,Dairy,Dazzlesphere,$7.00 ,45
+003-0011,Heavy Cream,Dairy,Ntags,$4.00 ,12
+003-0012,Cream,Dairy,Oyondu,$2.50 ,92
+003-0013,Cheese,Dairy,Shuffledrive,$9.00 ,53
+003-0014,Cottage Cheese,Dairy,Midel,$5.00 ,37
+003-0015,Whipped Cream,Dairy,Feedbug,$4.00 ,29
+003-0016,Gouda Cheese,Dairy,Thoughtblab,$7.00 ,100
+003-0017,Buttermilk,Dairy,Vinder,$2.50 ,47
+003-0018,Sour Cream,Dairy,Skyvu,$4.00 ,11
+003-0019,Cheddar Cheese,Dairy,Demizz,$9.00 ,88
+003-0020,Egg (Turkey),Dairy,Topiclounge,$2.50 ,44
+003-0021,Milk,Dairy,Thoughtsphere,$1.00 ,43
+003-0022,Evaporated Milk,Dairy,Blognation,$2.00 ,23
+003-0023,Yogurt,Dairy,Miboo,$1.75 ,59
+003-0024,Egg (Chicken),Dairy,Realfire,$0.20 ,10
+004-0001,Coffee,Beverages,Feedmix,$20.00 ,45
+004-0002,Tea,Beverages,Skivee,$20.00 ,55
+004-0003,Beer,Beverages,Pixonyx,$30.00 ,77
+004-0004,Coca cola,Beverages,Realpoint,$15.00 ,84
+004-0005,Pepsi,Beverages,Kwinu,$12.00 ,62
+004-0006,Small Water Bottle,Beverages,Brainbox,$5.00 ,46
+004-0007,Big Water Bottle,Beverages,Flipbug,$15.00 ,61
+004-0008,Blueberry Juice,Beverages,Skipstorm,$25.00 ,99
+004-0009,Apple Juice,Beverages,Voomm,$20.00 ,62
+004-0010,Chocolate Milk,Beverages,Yadel,$21.00 ,74
+004-0011,Energy Drink,Beverages,Oyoyo,$8.00 ,63
+004-0012,Aloe vera juice,Beverages,Browsecat,$31.00 ,48
+004-0013,Orange juice,Beverages,Topicstorm,$5.00 ,56
+004-0014,Mango juice,Beverages,Photofeed,$10.00 ,62
+005-0001,Sushi Rice,Grains & Pulses,Jaxnation,$4.50 ,22
+005-0002,Black Rice,Grains & Pulses,Vinder,$6.00 ,30
+005-0003,Long Grain Rice,Grains & Pulses,Brightbean,$1.50 ,12
+005-0004,All-Purpose Flour,Grains & Pulses,Dabjam,$1.75 ,55
+005-0005,White Sugar,Grains & Pulses,Zooxo,$2.00 ,91
+005-0006,Bread Flour,Grains & Pulses,Mynte,$1.50 ,27
+005-0007,Raw Sugar,Grains & Pulses,Mydo,$1.50 ,31
+005-0008,Short Grain Rice,Grains & Pulses,Snaptags,$3.00 ,60
+005-0009,Arborio Rice,Grains & Pulses,Feedmix,$4.50 ,20
+005-0010,Jasmine Rice,Grains & Pulses,Yadel,$4.75 ,91
+005-0011,Rice Flour,Grains & Pulses,Mynte,$2.00 ,52
+005-0012,Almond Flour,Grains & Pulses,Brainverse,$9.50 ,13
+005-0013,White Rice,Grains & Pulses,Centidel,$1.80 ,20
+005-0014,Cauliflower,Grains & Pulses,Shufflester,$3.20 ,40
+005-0015,Powdered Sugar,Grains & Pulses,Meeveo,$2.50 ,68
+005-0016,Whole Wheat Flour,Grains & Pulses,Gigaclub,$2.75 ,67
+005-0017,Basmati Rice,Grains & Pulses,Trilia,$4.50 ,56
+005-0018,Brown Rice,Grains & Pulses,Oyondu,$2.50 ,17
+005-0019,Coconut Sugar,Grains & Pulses,Bubblebox,$5.00 ,20
+005-0020,Wild Rice,Grains & Pulses,Devbug,$10.00 ,46
+006-0001,Corn Oil,Oils & Fats,Tagfeed,$2.50 ,96
+006-0002,Olive Oil,Oils & Fats,Kamba,$6.00 ,47
+006-0003,Peanut Oil,Oils & Fats,Bluezoom,$4.00 ,64
+006-0004,Palm Oil,Oils & Fats,Zooxo,$1.80 ,43
+006-0005,Canola Oil,Oils & Fats,Mydeo,$2.30 ,91
+006-0006,Avocado Oil,Oils & Fats,Skajo,$10.00 ,99
+006-0007,Vegetable Oil,Oils & Fats,Trudeo,$2.00 ,57
+006-0008,Sesame Oil,Oils & Fats,Feedbug,$6.50 ,27
+006-0009,Sunflower Oil,Oils & Fats,Skidoo,$2.50 ,88
+006-0010,Coconut Oil,Oils & Fats,Gevee,$5.00 ,33
+007-0001,Trout,Seafood,Jabbertype,$12.00 ,49
+007-0002,Haddock,Seafood,Midel,$9.00 ,46
+007-0003,Sardines,Seafood,Ntag,$6.00 ,91
+007-0004,Tilapia,Seafood,Fiveclub,$7.00 ,95
+007-0005,Cod,Seafood,Devbug,$8.00 ,23
+007-0006,Tuna,Seafood,Meemm,$18.00 ,25
+007-0007,Anchovies,Seafood,Jaxspan,$10.00 ,88
+007-0008,Mackerel,Seafood,Janyx,$7.50 ,71
+007-0009,Halibut,Seafood,Jaxspan,$20.00 ,40
+007-0010,Salmon,Seafood,Feedfish,$15.00 ,88
+008-0001,Beef Ribeye,Meats,Johnson Meats,$420.00 ,47
+008-0002,Pork Belly,Meats,Anderson Foods,$280.00 ,23
+008-0003,Chicken Breast,Meats,Smith Supplies,$190.00 ,39
+008-0004,Lamb Shoulder,Meats,Taylor Farms,$350.00 ,15
+008-0005,Beef Tenderloin,Meats,Brown Brothers,$500.00 ,28
+008-0006,Pork Chop,Meats,Miller Provisions,$230.00 ,44
+008-0007,Chicken Thigh,Meats,Davis Foods,$160.00 ,19
+008-0008,Duck Breast,Meats,Wilson Traders,$370.00 ,12
+008-0009,Goat Leg,Meats,Clark Meat Co.,$310.00 ,36
+008-0010,Turkey Drumstick,Meats,Lewis Foods,$210.00 ,25
+008-0011,Beef Brisket,Meats,Harris Butchers,$400.00 ,41
+008-0012,Pork Ribs,Meats,Martin Foods,$290.00 ,32
+008-0013,Chicken Wings,Meats,Roberts Suppliers,$150.00 ,48
+008-0014,Lamb Rack,Meats,Walker Farms,$460.00 ,11
+008-0015,Beef Sirloin,Meats,Young Distributors,$380.00 ,37
+008-0016,Pork Ham,Meats,Hall Foods,$250.00 ,27
+008-0017,Chicken Liver,Meats,Allen Provisions,$120.00 ,10
+008-0018,Veal Cutlet,Meats,Wright Meatworks,$340.00 ,16
+008-0019,Beef Flank,Meats,Hill Distributors,$320.00 ,30
+008-0020,Chicken Drumstick,Meats,Scott Supplies,$170.00 ,50

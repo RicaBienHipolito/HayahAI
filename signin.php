@@ -2,7 +2,7 @@
 session_start();
 
 // Database connection
-$servername = "localhost:3306";  // or localhost:3307 if needed
+$servername = "localhost:3307";  // or localhost:3307 if needed
 $username = "root";
 $password = "";
 $dbname = "hayahai_db";

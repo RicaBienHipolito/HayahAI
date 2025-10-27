@@ -2,7 +2,7 @@
 // register.php
 
 // Database connection
-$host = "localhost:3306";    // match your setup
+$host = "localhost:3307";    // match your setup
 $user = "root";              
 $pass = "";                  
 $dbname = "hayahai_db";      
