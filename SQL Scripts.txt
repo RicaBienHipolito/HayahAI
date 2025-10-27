@@ -1,0 +1,28 @@
+CREATE DATABASE hayahai_db;
+USE hayahai_db;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+
+--------------------------------------------
+CREATE TABLE products (
+    ProductID VARCHAR(10),
+    Name VARCHAR(50),
+    Category VARCHAR(50),
+    Supplier VARCHAR(50),
+    Price VARCHAR(10),
+    StockQuantity INT
+);
+
+
+-------------------------------------------
+LOAD DATA INFILE '(Paste Directory here)Products.csv'
+IGNORE INTO TABLE products
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(ProductID, Name, Category, Supplier, Price, StockQuantity);
