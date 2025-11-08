@@ -170,7 +170,7 @@ if (!isset($_SESSION['user_id'])) {
     <a href="main.php" style="display:block; margin-bottom:15px; text-decoration:none; color:black;">🏠 Home</a>
     <a href="products.php" style="display:block; margin-bottom:15px; text-decoration:none; color:black;">⚖️ Products</a>
     <a href="about.php" style="display:block; margin-bottom:15px; text-decoration:none; color:black;">ℹ️ About Us</a>
-    <a href="signout.php" style="display:block; text-decoration:none; color:black;">🚪 Sign Out</a>
+    <a href="functions/signout.php" style="display:block; text-decoration:none; color:black;">🚪 Sign Out</a>
   </div>
 
   <script>
@@ -229,28 +229,32 @@ if (!isset($_SESSION['user_id'])) {
   </div>
 
   <!-- Product Stuff -->
-  <div class = "product-container">
-    <?php 
-      $query = "SELECT ProductID, Name, Category, Supplier, Price, StockQuantity FROM products";
-      $result = $conn->query(query: $query);
+  <div class="product-container">
+  <?php 
+  $query = "SELECT ProductID, Name, Category, Supplier, Price, StockQuantity FROM products";
+  $result = $conn->query($query);
 
-      if ($result && $result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-              echo "
-              <div class='product-card'>
-                  <h3>{$row['Name']}</h3>
-                  <p><strong>Category:</strong> {$row['Category']}</p>
-                  <p><strong>Supplier:</strong> {$row['Supplier']}</p>
-                  <p><strong>Price:</strong> $" . number_format(num: $row['Price'], decimals: 2) . "</p>
-                  <p><strong>Stock:</strong> {$row['StockQuantity']} available</p>
-                  <button>Add to List</button>
-              </div>
-              ";
-          }
-      } else {
-          echo "<p>No products found.</p>";
-      }
-    ?>
+  if ($result && $result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+        ?>
+        <div class="product-card">
+            <h3><?php echo $row['Name']; ?></h3>
+            <p><strong>Category:</strong> <?php echo $row['Category']; ?></p>
+            <p><strong>Supplier:</strong> <?php echo $row['Supplier']; ?></p>
+            <p><strong>Price:</strong> $<?php echo number_format($row['Price'], 2); ?></p>
+            <p><strong>Stock:</strong> <?php echo $row['StockQuantity']; ?> available</p>
+
+            <form action="functions/add_to_list.php" method="POST">
+                <input type="hidden" name="ProductID" value="<?php echo $row['ProductID']; ?>">
+                <button type="submit">Add to List</button>
+            </form>
+        </div>
+        <?php
+    }
+  } else {
+      echo "<p>No products found.</p>";
+  }
+  ?>
   </div>
 
   <footer>HayahAI</footer>
